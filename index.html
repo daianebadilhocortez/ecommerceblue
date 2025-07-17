@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluestore | Página Inicial</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="index-body">
+  <header class="index-header">
+    <div class="index-header-container">
+      <h1 class="index-header-title">Bluestore</h1>
+      <input type="text" id="searchInput" placeholder="Buscar produtos..." class="index-search-input">
+    </div>
+  </header>
+
+  <main class="index-main">
+    <h2 class="index-title">Produtos em Destaque</h2>
+    <div id="productList" class="index-product-grid">
+      <!-- Produtos inseridos via JavaScript -->
+    </div>
+  </main>
+
+  <footer class="index-footer">
+    <p>&copy; 2025 Bluestore. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const produtos = [
+      { id: 1, nome: "Tênis Azul", preco: 199.99, imagem: "img/tenis-azul.jpg" },
+      { id: 2, nome: "Camisa Polo", preco: 89.90, imagem: "img/camisa-polo.jpg" },
+      { id: 3, nome: "Mochila Urbana", preco: 149.50, imagem: "img/mochila.jpg" },
+    ];
+
+    const productList = document.getElementById("productList");
+
+    function renderProducts(filteredProducts) {
+      productList.innerHTML = "";
+      filteredProducts.forEach(produto => {
+        const div = document.createElement("div");
+        div.className = "index-product-card";
+        div.innerHTML = `
+          <img src="${produto.imagem}" alt="${produto.nome}" class="index-product-image">
+          <h3 class="index-product-name">${produto.nome}</h3>
+          <p class="index-product-price">R$ ${produto.preco.toFixed(2)}</p>
+          <a href="product.html?id=${produto.id}" class="index-product-link">Ver Detalhes</a>
+        `;
+        productList.appendChild(div);
+      });
+    }
+
+    document.getElementById("searchInput").addEventListener("input", function () {
+      const searchTerm = this.value.toLowerCase();
+      const filtered = produtos.filter(p => p.nome.toLowerCase().includes(searchTerm));
+      renderProducts(filtered);
+    });
+
+    renderProducts(produtos);
+  </script>
+</body>
+
+</html>
