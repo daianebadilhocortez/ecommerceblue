@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bluestore | Moda Feminina</title>
+  <title>Bluestore | Camisetas Masculinas</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css">
 </head>
@@ -12,96 +12,59 @@
 <body class="bg-gray-50">
 
   <!-- Cabeçalho -->
-  <header class="bg-white shadow-md fixed top-0 w-full z-10">
-    <div class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
-      <h1 class="text-2xl font-semibold text-gray-800">Bluestore</h1>
-      <input type="text" id="searchInput" placeholder="Buscar produtos..." class="px-4 py-2 border rounded-lg w-64">
+  <header class="header">
+    <div class="container flex-between">
+      <h1 class="title">Bluestore</h1>
+      <input type="text" id="searchInput" placeholder="Buscar produtos..." class="search-input">
     </div>
   </header>
 
   <!-- Menu de Navegação -->
-  <nav class="bg-gray-100 py-4 mt-16">
-    <div class="max-w-screen-xl mx-auto px-4 flex justify-between">
-      <ul class="flex space-x-6">
-        <li><a href="#" class="text-gray-700 hover:text-blue-600">Roupas</a></li>
-        <li><a href="#" class="text-gray-700 hover:text-blue-600">Calçados</a></li>
-        <li><a href="#" class="text-gray-700 hover:text-blue-600">Bolsas</a></li>
-        <li><a href="#" class="text-gray-700 hover:text-blue-600">Acessórios</a></li>
+  <nav class="nav">
+    <div class="container flex-between wrap">
+      <ul class="menu">
+        <li><a href="#">Camisetas</a></li>
+        <li><a href="#">Calças</a></li>
+        <li><a href="#">Acessórios</a></li>
+        <li><a href="#">Relógios</a></li>
       </ul>
-      <ul class="flex space-x-6">
-        <li><a href="#" class="text-gray-700 hover:text-blue-600">Promoções</a></li>
-        <li><a href="#" class="text-gray-700 hover:text-blue-600">Novidades</a></li>
-        <li><a href="#" class="text-gray-700 hover:text-blue-600">Outlet</a></li>
+      <ul class="menu mt-mobile">
+        <li><a href="#">Promoções</a></li>
+        <li><a href="#">Novidades</a></li>
+        <li><a href="#">Outlet</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Banner Promocional -->
-  <section class="bg-blue-600 text-white py-12">
-    <div class="max-w-screen-xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-semibold">Super Ofertas de Moda Feminina!</h2>
-      <p class="mt-4">Descontos imperdíveis em roupas, calçados e acessórios. Só até o final do mês!</p>
-      <a href="#" class="mt-6 inline-block bg-white text-blue-600 py-2 px-6 rounded-lg">Ver Promoções</a>
+  <section class="banner">
+    <div class="container text-center">
+      <h2 class="banner-title">Super Ofertas de Camisetas Masculinas!</h2>
+      <p class="banner-text">Estilos variados e conforto para o seu dia a dia. Aproveite enquanto durarem os estoques!</p>
+      <a href="#" class="banner-button">Ver Promoções</a>
     </div>
   </section>
 
   <!-- Produtos em Destaque -->
-  <main class="py-12">
-    <div class="max-w-screen-xl mx-auto px-4">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-6">Produtos em Destaque</h2>
-      <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        <!-- Produtos serão inseridos aqui via JavaScript -->
+  <main class="main-content">
+    <div class="container">
+      <h2 class="section-title">Camisetas em Destaque</h2>
+      <div id="productList" class="product-grid">
+        <!-- Produtos serão inseridos via JS -->
       </div>
     </div>
   </main>
 
   <!-- Rodapé -->
-  <footer class="bg-gray-800 text-white py-8">
-    <div class="max-w-screen-xl mx-auto px-4 text-center">
+  <footer class="footer">
+    <div class="container text-center">
       <p>&copy; 2025 Bluestore. Todos os direitos reservados.</p>
-      <p class="mt-4">Rua Exemplo, 123 - São Paulo, SP</p>
+      <p>Rua Exemplo, 123 - São Paulo, SP</p>
     </div>
   </footer>
 
-  <script>
-    const produtos = [
-      { id: 1, nome: "Vestido Floral", preco: 199.99, imagem: "https://images.unsplash.com/photo-1602810318862-774b2d7aefec?auto=format&fit=crop&w=600&q=80" },
-      { id: 2, nome: "Blusa de Tricot", preco: 89.90, imagem: "https://images.unsplash.com/photo-1571080369986-071abeb6e576?auto=format&fit=crop&w=600&q=80" },
-      { id: 3, nome: "Saia Midi", preco: 129.50, imagem: "https://images.unsplash.com/photo-1592878905955-2f3f6a2aef84?auto=format&fit=crop&w=600&q=80" },
-      { id: 4, nome: "Sandália de Salto", preco: 159.00, imagem: "https://images.unsplash.com/photo-1571080369986-071abeb6e576?auto=format&fit=crop&w=600&q=80" },
-      { id: 5, nome: "Bolsa de Couro", preco: 249.90, imagem: "https://images.unsplash.com/photo-1606813908505-f029f6237b4a?auto=format&fit=crop&w=600&q=80" },
-      { id: 6, nome: "Tênis Casual", preco: 199.90, imagem: "https://images.unsplash.com/photo-1611080629542-146f2ff9ee3c?auto=format&fit=crop&w=600&q=80" },
-      { id: 7, nome: "Jaqueta de Couro", preco: 299.00, imagem: "https://images.unsplash.com/photo-1610913188493-37b8bb21230d?auto=format&fit=crop&w=600&q=80" },
-      { id: 8, nome: "Cinto de Couro", preco: 49.90, imagem: "https://images.unsplash.com/photo-1600181955534-02f54e3d92f0?auto=format&fit=crop&w=600&q=80" },
-    ];
-
-    const productList = document.getElementById("productList");
-
-    function renderProducts(filteredProducts) {
-      productList.innerHTML = "";
-      filteredProducts.forEach(produto => {
-        const div = document.createElement("div");
-        div.className = "bg-white border rounded-lg overflow-hidden shadow-md";
-        div.innerHTML = `
-          <img src="${produto.imagem}" alt="${produto.nome}" class="w-full h-64 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-semibold text-gray-800">${produto.nome}</h3>
-            <p class="text-xl font-bold text-blue-600">R$ ${produto.preco.toFixed(2)}</p>
-            <a href="product.html?id=${produto.id}" class="inline-block mt-4 text-blue-600 hover:underline">Ver Detalhes</a>
-          </div>
-        `;
-        productList.appendChild(div);
-      });
-    }
-
-    document.getElementById("searchInput").addEventListener("input", function () {
-      const searchTerm = this.value.toLowerCase();
-      const filtered = produtos.filter(p => p.nome.toLowerCase().includes(searchTerm));
-      renderProducts(filtered);
-    });
-
-    renderProducts(produtos);
-  </script>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 
 </body>
 
