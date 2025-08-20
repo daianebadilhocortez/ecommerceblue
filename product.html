@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bluestore | Carrinho</title>
+  <title>Bluestore | Detalhes do Produto</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css">
 </head>
@@ -16,28 +16,8 @@
 </header>
 
 <main class="main-content">
-  <div class="container">
-    <h2 class="section-title">Seu Carrinho</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Produto</th>
-          <th>Quantidade</th>
-          <th>Preço Unitário</th>
-          <th>Subtotal</th>
-          <th>Remover</th>
-        </tr>
-      </thead>
-      <tbody id="itens-carrinho">
-        <!-- Itens do carrinho serão inseridos via JS -->
-      </tbody>
-    </table>
-    <div class="mt-4 text-right font-bold text-xl">
-      Total: R$ <span id="total-geral">0.00</span>
-    </div>
-    <div class="mt-4 text-right">
-      <a href="checkout.html" class="banner-button">Finalizar Compra</a>
-    </div>
+  <div class="container" id="detalhe-produto">
+    <!-- Produto será carregado via JS -->
   </div>
 </main>
 

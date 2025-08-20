@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bluestore | Checkout</title>
+  <title>Bluestore | Finalizar Compra</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css">
 </head>
@@ -11,36 +11,23 @@
 
 <header class="header">
   <div class="container flex-between">
-    <h1 class="title">Bluestore</h1>
-    <input type="text" id="searchInput" placeholder="Buscar produtos..." class="search-input">
+    <h1 class="title"><a href="index.html">Bluestore</a></h1>
   </div>
 </header>
 
-<nav class="nav">
-  <div class="container flex-between wrap">
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="produto.html">Produtos</a></li>
-      <li><a href="carrinho.html">Carrinho</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li><a href="institucional.html">Sobre Nós</a></li>
-    </ul>
+<main class="main-content">
+  <div class="container">
+    <h2 class="section-title">Finalizar Compra</h2>
+    <form id="checkoutForm">
+      <input type="text" id="nome" placeholder="Nome completo" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="endereco" placeholder="Endereço de entrega" required>
+      <input type="text" id="cidade" placeholder="Cidade" required>
+      <input type="text" id="cep" placeholder="CEP" required>
+      <input type="text" id="cartao" placeholder="Número do cartão" required>
+      <button type="submit" class="banner-button">Finalizar Compra</button>
+    </form>
   </div>
-</nav>
-
-<main class="main-content container my-8">
-  <h2 class="text-2xl font-bold mb-4">Finalizar Compra</h2>
-  <form class="flex flex-col gap-4 max-w-lg">
-    <input type="text" placeholder="Nome Completo" required class="border p-2 rounded">
-    <input type="email" placeholder="E-mail" required class="border p-2 rounded">
-    <input type="text" placeholder="Endereço" required class="border p-2 rounded">
-    <select required class="border p-2 rounded">
-      <option value="">Forma de Pagamento</option>
-      <option value="cartao">Cartão de Crédito</option>
-      <option value="boleto">Boleto Bancário</option>
-    </select>
-    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Finalizar Pedido</button>
-  </form>
 </main>
 
 <footer class="footer">
