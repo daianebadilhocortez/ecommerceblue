@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluestore | Contato</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="bg-gray-50">
+
+<header class="header">
+  <div class="container flex-between">
+    <h1 class="title">Bluestore</h1>
+    <input type="text" id="searchInput" placeholder="Buscar produtos..." class="search-input">
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="container flex-between wrap">
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produto.html">Produtos</a></li>
+      <li><a href="carrinho.html">Carrinho</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="institucional.html">Sobre Nós</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main-content container my-8">
+  <h2 class="text-2xl font-bold mb-4">Fale Conosco</h2>
+  <form class="flex flex-col gap-4 max-w-lg">
+    <input type="text" placeholder="Nome" required class="border p-2 rounded">
+    <input type="email" placeholder="E-mail" required class="border p-2 rounded">
+    <textarea placeholder="Mensagem" rows="5" required class="border p-2 rounded"></textarea>
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar</button>
+  </form>
+  <p class="mt-4">Email: contato@bluestore.com | Telefone: (11) 99999-9999</p>
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <p>&copy; 2025 Bluestore. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

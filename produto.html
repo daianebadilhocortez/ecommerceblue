@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluestore | Produto</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="bg-gray-50">
+
+<header class="header">
+  <div class="container flex-between">
+    <h1 class="title">Bluestore</h1>
+    <input type="text" id="searchInput" placeholder="Buscar produtos..." class="search-input">
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="container flex-between wrap">
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produto.html">Produtos</a></li>
+      <li><a href="carrinho.html">Carrinho</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="institucional.html">Sobre Nós</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main-content container my-8">
+  <div class="flex flex-col md:flex-row gap-8">
+    <img src="img/produto1.jpg" alt="Camiseta Masculina" class="w-full md:w-1/2 object-cover">
+    <div class="flex-1">
+      <h2 class="text-2xl font-bold mb-4">Camiseta Masculina Estilosa</h2>
+      <p class="mb-4">Descrição detalhada do produto, material, cuidados e características.</p>
+      <p class="text-xl font-semibold mb-4">R$ 79,90</p>
+      <label for="quantidade" class="block mb-2">Quantidade:</label>
+      <input type="number" id="quantidade" name="quantidade" value="1" min="1" class="border p-2 mb-4 w-24">
+      <button onclick="adicionarCarrinho()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <p>&copy; 2025 Bluestore. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
